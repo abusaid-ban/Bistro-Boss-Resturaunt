@@ -14,7 +14,7 @@ const Order = () => {
     const initialIndex = categories.indexOf(category);
     const [tabIndex, setTabIndex] = useState(initialIndex);
     const [menu] = useMenu();
-    const desserts = menu.filter(item => item.category == 'dessert')
+    const dessert = menu.filter(item => item.category == 'dessert')
     const salad = menu.filter(item => item.category == 'salad')
     const soup = menu.filter(item => item.category == 'soup')
     const pizza = menu.filter(item => item.category == 'pizza')
@@ -38,13 +38,13 @@ const Order = () => {
                         <OrderTab items={salad}></OrderTab>
                     </TabPanel>
                     <TabPanel>
+                        <OrderTab items={pizza}></OrderTab>
+                    </TabPanel>
+                    <TabPanel>
                         <OrderTab items={soup}></OrderTab>
                     </TabPanel>
                     <TabPanel>
-                        <OrderTab items={desserts}></OrderTab>
-                    </TabPanel>
-                    <TabPanel>
-                        <OrderTab items={pizza}></OrderTab>
+                        <OrderTab items={dessert}></OrderTab>
                     </TabPanel>
                     <TabPanel>
                         <OrderTab items={drinks}></OrderTab>
