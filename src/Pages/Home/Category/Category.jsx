@@ -29,37 +29,37 @@ const Category = () => {
             >
                 <SwiperSlide>
                     <img src={img1} alt="" />
-                    <h2 className="text-3xl text-center -mt-12 upper
+                    <h2 className="text-3xl text-center -mt-14 upper
                  text-white">Salad</h2>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img2} alt="" />
-                    <h2 className="text-3xl text-center -mt-12 upper
+                    <h2 className="text-3xl text-center -mt-14 upper
                  text-white">pizza</h2>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img3} alt="" />
-                    <h2 className="text-3xl text-center -mt-12 upper
+                    <h2 className="text-3xl text-center -mt-14 upper
                  text-white">Soup</h2>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img4} alt="" />
-                    <h2 className="text-3xl text-center -mt-12 upper
+                    <h2 className="text-3xl text-center -mt-14 upper
                  text-white">Dessert</h2>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img5} alt="" />
-                    <h2 className="text-3xl text-center -mt-12 upper
+                    <h2 className="text-3xl text-center -mt-14 upper
                  text-white">Vegetable</h2>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img2} alt="" />
-                    <h2 className="text-3xl text-center -mt-12 upper
+                    <h2 className="text-3xl text-center -mt-14 upper
                  text-white">pizza</h2>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={img4} alt="" />
-                    <h2 className="text-3xl text-center -mt-12 upper
+                    <h2 className="text-3xl text-center -mt-14 upper
                  text-white">Dessert</h2>
                 </SwiperSlide>
 
