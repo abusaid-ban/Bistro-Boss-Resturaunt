@@ -2,7 +2,7 @@ import img from "../../../assets/home/chef-service.jpg"
 
 const ChefService = () => {
     return (
-        <div className="my-24">
+        <div className="md:mb-56 mb-24">
         <img className="absolute max-w-full" src={img} alt="" />
        <div className=" relative  -bottom-6 md:-bottom-32   text-center  bg-white w-[65%] mx-auto">
        <h3 className="md:text-4xl md:pt-5">Bistro Boss</h3>
