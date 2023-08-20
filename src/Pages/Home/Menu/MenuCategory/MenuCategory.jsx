@@ -6,9 +6,9 @@ import MenuItems from "../../MenuItems/MenuItems";
 const MenuCategory = ({ items, title, img }) => {
     return (
 
-        <div className="pt-8">
+        <div className="w-[95%] mx-auto">
             {title && <Cover img={img} title={title}></Cover>}
-            <div className="grid md:grid-cols-2 gap-10 my-16 ">
+            <div className="grid md:grid-cols-2 gap-10 mt-16 mb-4 ">
                 {
                     items.map(item => <MenuItems
                         key={item._id}
@@ -18,7 +18,7 @@ const MenuCategory = ({ items, title, img }) => {
             </div>
             <div className="text-center">
                 <Link to={`/order/${title}`}>
-                    <button className="btn btn-outline border-0 border-b-4 mt-4">Order Now</button>
+                    <button className="btn btn-outline border-0 border-b-4 border-orange-400 mb-12">Order Your Favorite Food</button>
                 </Link>
             </div>
         </div>

@@ -12,9 +12,10 @@ import img6 from '../../../assets/home/06.png'
 
 const Banner = () => {
     return (
-        <Carousel>
+      
+          <Carousel >
         <div>
-            <img src={img2} />
+            <img  src={img2} />
            
         </div>
         <div>
@@ -38,6 +39,7 @@ const Banner = () => {
           
         </div>
     </Carousel>
+    
     );
 };
 
