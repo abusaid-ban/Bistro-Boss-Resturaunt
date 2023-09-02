@@ -8,6 +8,7 @@ import Order from "../Pages/Order/Order/Order";
 import Login from "../Pages/Login/Login";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import Contact from "../Pages/Contact/Contact";
+import SignUp from "../Pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,11 @@ const router = createBrowserRouter([
             {
                 path:'/login',
                 element:<Login></Login>
-            }
+            },
+            {
+                path:'/signup',
+                element:<SignUp></SignUp>
+            },
         ]
     },
 ]);
