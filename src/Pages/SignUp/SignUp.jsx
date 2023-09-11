@@ -1,13 +1,26 @@
+import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProviders";
 
 
 const SignUp = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const {createUser} = useContext(AuthContext);
     const onSubmit = data => {
-        console.log(data)
-    };
-    console.log(watch("example"));
+        
+        createUser(data.email,data.password)
+        .then(result =>{
+        const loggedUser = result.user;
+        console.log(loggedUser);
+    })};
+    
     return (
+      <>
+        <Helmet>
+                <title>Bistro Boss | SignUp</title>
+            </Helmet>
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
@@ -34,7 +47,14 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" {...register("password", { required: true },{ required: true, maxLength: 20 })} name="password" placeholder="password" className="input input-bordered" />
+                            <input type="password" {...register("password",{ required: true,
+                            minLength:6,
+                            maxLength: 20,
+                            pattern: /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])/
+                             })} name="password" placeholder="password" className="input input-bordered" />
+                            {errors.password?.type === 'minLength' && <p className="text-red-600 p-1">Password must be 6 characters</p>}
+                            {errors.password?.type === 'maxLength' && <p className="text-red-600 p-1">Password must be less than 20 characters</p>}
+                            {errors.password?.type === 'pattern' && <p className="text-red-600 p-1">Password must be one uppercase, one lowercase, one number</p>}
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
@@ -43,9 +63,11 @@ const SignUp = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </form>
+                    <p className='text-center pb-3'><small>Already have an Account? <Link className='text-blue-600' to="/login">Login Here</Link></small></p>
                 </div>
             </div>
         </div>
+      </>
     );
 };
 
