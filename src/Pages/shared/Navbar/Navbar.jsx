@@ -22,6 +22,8 @@ const Navbar = () => {
         {
             user ? 
             <>
+            <span>{user?.displayName}</span>
+            <img src={user?.photo} alt="" />
             <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
             </> :
                 <>
