@@ -1,14 +1,15 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProviders";
-import logo from "../../../assets/icon/logo.png"
+import logo from "../../../assets/icon/logo.png";
+import {  FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
-    const { user,logOut } = useContext(AuthContext);
-    const handleLogOut =() =>{
+    const { user, logOut } = useContext(AuthContext);
+    const handleLogOut = () => {
         logOut()
-        .then(()=>{})
-        .then(error => console.log(error))
+            .then(() => { })
+            .then(error => console.log(error))
     }
     const navOptions = <>
 
@@ -18,14 +19,19 @@ const Navbar = () => {
         <li><Link to='/order/salad'>Order Food</Link></li>
         <li><Link to='/secret'>Secret</Link></li>
         <li><Link to='/contact'>Contact Us</Link></li>
+        <li><Link to='/'>
+            <button className="btn text-yellow-400">
+                <FaShoppingCart className="h-6 w-6"></FaShoppingCart>
+                <div className="badge badge-secondary  text-yellow-300">+0</div>
+            </button></Link>
+        </li>
 
         {
-            user ? 
-            <>
-            <span>{user?.displayName}</span>
-            <img src={user?.photo} alt="" />
-            <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
-            </> :
+            user ?
+                <>
+
+                    <button onClick={handleLogOut} className="btn btn-ghost">Log Out</button>
+                </> :
                 <>
                     <li><Link to='/login'>Login</Link></li>
                 </>
@@ -46,8 +52,8 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="flex items-center">
-                <img className="w-16 h-16" src={logo} alt="" />
-                <Link to="/" className="btn btn-ghost normal-case text-xl text-yellow-300">RoadSide Kitchen</Link>
+                    <img className="w-16 h-16" src={logo} alt="" />
+                    <Link to="/" className="btn btn-ghost normal-case text-xl text-yellow-300">RoadSide Kitchen</Link>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
