@@ -19,6 +19,8 @@ const Dashboard = () => {
             <li><Link to="">Shopping</Link></li>
             <li><Link to=""><FaShoppingCart></FaShoppingCart>Home</Link></li>
             <li><Link to="">Shopping</Link></li>
+            <li><Link to=""><FaShoppingCart></FaShoppingCart>Home</Link></li>
+            
            
           </ul>
         
