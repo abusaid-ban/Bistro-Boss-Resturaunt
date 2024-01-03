@@ -14,6 +14,7 @@ const Dashboard = () => {
             <div className="drawer-side  bg-[#D1A054]">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80  text-base-content">
+                <h2 className="text-4xl text-blue-700">RoadSite Kitchen</h2>
 
                     <li><NavLink to="/dashboard/home"><FaHome></FaHome> User Home</NavLink></li>
                     <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt>Reservations</NavLink></li>

@@ -13,6 +13,8 @@ const MyCart = () => {
            <div>
             <h2 className="text-3xl">Total products: {cart.length}</h2>
             <h2 className="text-3xl">Total Price: {total}</h2>
+            <h2 className="text-3xl">Total products: {cart.length}</h2>
+            <h2 className="text-3xl">Total Price: {total}</h2>
            </div>
             
         </div>
