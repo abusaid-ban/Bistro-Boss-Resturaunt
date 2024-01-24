@@ -16,7 +16,7 @@ const Navbar = () => {
     const navOptions = <>
 
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/dashboard'>DashBoard</Link></li>
+        {/* <li><Link to='/dashboard'>DashBoard</Link></li> */}
         <li><Link to='/menu'>Our Menu</Link></li>
         <li><Link to='/order/salad'>Order Food</Link></li>
         <li><Link to='/secret'>Secret</Link></li>
@@ -25,7 +25,8 @@ const Navbar = () => {
             <button className="btn text-yellow-400">
                 <FaShoppingCart className="h-6 w-6"></FaShoppingCart>
                 <div className="badge badge-secondary  text-yellow-300">+{cart?.length || 0 }</div>
-            </button></Link>
+            </button>
+            </Link>
         </li>
 
         {

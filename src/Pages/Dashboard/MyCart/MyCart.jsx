@@ -10,7 +10,7 @@ const MyCart = () => {
     const handleDelete = item =>{
         Swal.fire({
             title: "Are you sure?",
-            text: "You won't be able to revert this!",
+           
             icon: "warning",
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
@@ -27,7 +27,7 @@ const MyCart = () => {
                     refetch();
                     Swal.fire({
                         title: "Deleted!",
-                        text: "Your file has been deleted.",
+                        text: "1 item deleted from Carts.",
                         icon: "success"
                       });
 
